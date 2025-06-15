@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cihan Kaya - Lens Dünyası</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3b82f6", secondary: "#10b981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Poppins', sans-serif;
+      }
+      .hero-section {
+      background-image: url('https://readdy.ai/api/search-image?query=high-end%20professional%20photography%20of%20contact%20lenses%20with%20soft%20blue%20background%2C%20crystal%20clear%20lenses%20with%20water%20droplets%2C%20minimalist%20elegant%20composition%2C%20premium%20product%20photography%20with%20soft%20lighting%2C%20luxury%20eyewear%20product%20showcase%2C%20medical%20grade%20contact%20lenses&width=1920&height=1080&seq=12345&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      }
+      input:focus {
+      outline: none;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+      .custom-checkbox {
+      position: relative;
+      padding-left: 2rem;
+      cursor: pointer;
+      }
+      .custom-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      }
+      .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      }
+      .custom-checkbox:hover input ~ .checkmark {
+      border-color: #ccc;
+      }
+      .custom-checkbox input:checked ~ .checkmark {
+      background-color: #3b82f6;
+      border-color: #3b82f6;
+      }
+      .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      }
+      .custom-checkbox input:checked ~ .checkmark:after {
+      display: block;
+      }
+      .custom-checkbox .checkmark:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex flex-col">
+          <a href="#" class="text-2xl font-bold text-primary">Cihan Kaya</a>
+          <span class="text-sm text-gray-600"
+            >Gözleriniz İçin En İyi Seçim</span
+          >
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a
+            href="#"
+            class="font-medium text-gray-900 hover:text-primary transition-colors"
+            >Ana Sayfa</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-600 hover:text-primary transition-colors"
+            >Ürünler</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-600 hover:text-primary transition-colors"
+            >Hakkımızda</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-600 hover:text-primary transition-colors"
+            >İletişim</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+          >
+            <i class="ri-search-line ri-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors"
+          >
+            <i class="ri-user-line ri-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors relative"
+          >
+            <i class="ri-shopping-cart-line ri-lg"></i>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full"
+              >3</span
+            >
+          </a>
+          <button
+            class="md:hidden w-10 h-10 flex items-center justify-center text-gray-600"
+            id="mobile-menu-button"
+          >
+            <i class="ri-menu-line ri-lg"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-md"
+        id="mobile-menu"
+      >
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+          <a
+            href="#"
+            class="font-medium text-gray-900 py-2 border-b border-gray-100"
+            >Ana Sayfa</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-600 py-2 border-b border-gray-100"
+            >Ürünler</a
+          >
+          <a
+            href="#"
+            class="font-medium text-gray-600 py-2 border-b border-gray-100"
+            >Hakkımızda</a
+          >
+          <a href="#" class="font-medium text-gray-600 py-2">İletişim</a>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section w-full h-screen relative pt-16">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"
+      ></div>
+      <div class="container mx-auto px-4 h-full flex items-center">
+        <div class="w-full max-w-2xl text-white relative z-10">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">
+            Gözleriniz İçin En İyi Lens Çözümleri
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-gray-100">
+            Cihan Kaya ile konforlu ve net görüş deneyimini keşfedin. Yüksek
+            kaliteli lens ürünlerimizle hayatı daha net görün.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 font-medium !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+            >
+              Hemen İncele
+            </button>
+            <button
+              class="bg-white text-gray-900 px-8 py-3 font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+            >
+              Daha Fazla Bilgi
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Categories Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Lens Kategorilerimiz
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            İhtiyacınıza uygun lens çeşitlerini keşfedin. Geniş ürün
+            yelpazemizle her göz tipine ve kullanım amacına uygun lensler
+            sunuyoruz.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Category 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=high%20quality%20blue%20contact%20lenses%20on%20white%20background%2C%20medical%20grade%20contact%20lenses%20with%20water%20droplets%2C%20clean%20clinical%20product%20photography%2C%20soft%20blue%20tint%2C%20transparent%20lens%20material%2C%20eye%20care%20product&width=600&height=400&seq=12346&orientation=landscape"
+                alt="Renkli Lensler"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Renkli Lensler</h3>
+              <p class="text-gray-600 mb-4">
+                Göz renginizi değiştirin ve yeni bir görünüm elde edin. Doğal
+                tonlardan canlı renklere kadar çeşitli seçenekler.
+              </p>
+              <a href="#" class="text-primary font-medium flex items-center">
+                Keşfet
+                <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Category 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=clear%20daily%20contact%20lenses%20on%20white%20background%2C%20medical%20grade%20contact%20lenses%20with%20water%20droplets%2C%20clean%20clinical%20product%20photography%2C%20transparent%20lens%20material%20arranged%20neatly%2C%20eye%20care%20product%20with%20minimal%20styling&width=600&height=400&seq=12347&orientation=landscape"
+                alt="Günlük Lensler"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Günlük Lensler</h3>
+              <p class="text-gray-600 mb-4">
+                Pratik ve hijyenik kullanım için ideal. Her gün yeni bir lens
+                ile maksimum konfor ve temizlik.
+              </p>
+              <a href="#" class="text-primary font-medium flex items-center">
+                Keşfet
+                <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Category 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=premium%20monthly%20contact%20lenses%20in%20case%20with%20solution%2C%20medical%20grade%20contact%20lenses%20with%20water%20droplets%2C%20clean%20clinical%20product%20photography%2C%20lens%20storage%20case%20open%20showing%20lenses%2C%20eye%20care%20maintenance%20products&width=600&height=400&seq=12348&orientation=landscape"
+                alt="Aylık Lensler"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Aylık Lensler</h3>
+              <p class="text-gray-600 mb-4">
+                Ekonomik ve uzun süreli kullanım için tasarlanmış dayanıklı
+                lensler. Aylık bakım ile sürekli konfor.
+              </p>
+              <a href="#" class="text-primary font-medium flex items-center">
+                Keşfet
+                <i class="ri-arrow-right-line ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Products -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold">Öne Çıkan Ürünler</h2>
+          <div class="flex space-x-2">
+            <button
+              id="prev-slide"
+              class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md text-gray-600 hover:text-primary transition-colors"
+            >
+              <i class="ri-arrow-left-s-line ri-lg"></i>
+            </button>
+            <button
+              id="next-slide"
+              class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md text-gray-600 hover:text-primary transition-colors"
+            >
+              <i class="ri-arrow-right-s-line ri-lg"></i>
+            </button>
+          </div>
+        </div>
+        <div class="relative overflow-hidden">
+          <div
+            id="product-slider"
+            class="flex transition-transform duration-500 ease-in-out"
+          >
+            <!-- Product 1 -->
+            <div class="min-w-[280px] md:min-w-[300px] p-4">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                <div class="h-48 overflow-hidden relative group">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=blue%20contact%20lenses%20in%20modern%20packaging%2C%20luxury%20contact%20lens%20product%20with%20elegant%20box%2C%20premium%20eye%20care%20product%20on%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows&width=400&height=300&seq=12349&orientation=landscape"
+                    alt="Aqua Blue Lens"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute top-3 right-3 bg-primary text-white text-xs px-2 py-1 rounded-full"
+                  >
+                    Yeni
+                  </div>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-bold mb-1">Aqua Blue Lens</h3>
+                  <p class="text-gray-500 text-sm mb-2">Renkli Günlük Lens</p>
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold text-gray-900">₺149,90</span>
+                    <span class="text-sm text-gray-500 line-through"
+                      >₺199,90</span
+                    >
+                  </div>
+                  <button
+                    class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                  >
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="min-w-[280px] md:min-w-[300px] p-4">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                <div class="h-48 overflow-hidden relative group">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=green%20contact%20lenses%20in%20modern%20packaging%2C%20luxury%20contact%20lens%20product%20with%20elegant%20box%2C%20premium%20eye%20care%20product%20on%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows&width=400&height=300&seq=12350&orientation=landscape"
+                    alt="Emerald Green Lens"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute top-3 right-3 bg-secondary text-white text-xs px-2 py-1 rounded-full"
+                  >
+                    Popüler
+                  </div>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-bold mb-1">Emerald Green Lens</h3>
+                  <p class="text-gray-500 text-sm mb-2">Renkli Aylık Lens</p>
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold text-gray-900">₺219,90</span>
+                    <span class="text-sm text-gray-500 line-through"
+                      >₺249,90</span
+                    >
+                  </div>
+                  <button
+                    class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                  >
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="min-w-[280px] md:min-w-[300px] p-4">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                <div class="h-48 overflow-hidden relative group">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=clear%20contact%20lenses%20in%20modern%20packaging%2C%20luxury%20contact%20lens%20product%20with%20elegant%20box%2C%20premium%20eye%20care%20product%20on%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows&width=400&height=300&seq=12351&orientation=landscape"
+                    alt="Crystal Clear Lens"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-bold mb-1">Crystal Clear Lens</h3>
+                  <p class="text-gray-500 text-sm mb-2">Şeffaf Günlük Lens</p>
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold text-gray-900">₺129,90</span>
+                  </div>
+                  <button
+                    class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                  >
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="min-w-[280px] md:min-w-[300px] p-4">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                <div class="h-48 overflow-hidden relative group">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=brown%20contact%20lenses%20in%20modern%20packaging%2C%20luxury%20contact%20lens%20product%20with%20elegant%20box%2C%20premium%20eye%20care%20product%20on%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows&width=400&height=300&seq=12352&orientation=landscape"
+                    alt="Hazel Brown Lens"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div
+                    class="absolute top-3 right-3 bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
+                  >
+                    İndirim
+                  </div>
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-bold mb-1">Hazel Brown Lens</h3>
+                  <p class="text-gray-500 text-sm mb-2">Renkli Aylık Lens</p>
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold text-gray-900">₺189,90</span>
+                    <span class="text-sm text-gray-500 line-through"
+                      >₺239,90</span
+                    >
+                  </div>
+                  <button
+                    class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                  >
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="min-w-[280px] md:min-w-[300px] p-4">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                <div class="h-48 overflow-hidden relative group">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=gray%20contact%20lenses%20in%20modern%20packaging%2C%20luxury%20contact%20lens%20product%20with%20elegant%20box%2C%20premium%20eye%20care%20product%20on%20white%20background%2C%20professional%20product%20photography%20with%20soft%20shadows&width=400&height=300&seq=12353&orientation=landscape"
+                    alt="Smoky Gray Lens"
+                    class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-lg font-bold mb-1">Smoky Gray Lens</h3>
+                  <p class="text-gray-500 text-sm mb-2">Renkli Günlük Lens</p>
+                  <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-bold text-gray-900">₺159,90</span>
+                  </div>
+                  <button
+                    class="w-full bg-primary text-white py-2 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+                  >
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Neden Bizi Tercih Etmelisiniz?
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Cihan Kaya olarak müşteri memnuniyetini en üst seviyede tutmak için
+            çalışıyoruz. İşte bizi farklı kılan özelliklerimiz.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-award-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Kaliteli Ürünler</h3>
+            <p class="text-gray-600">
+              Tüm lenslerimiz en yüksek kalite standartlarında üretilmiştir ve
+              sertifikalıdır.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-truck-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Hızlı Teslimat</h3>
+            <p class="text-gray-600">
+              Siparişleriniz aynı gün içinde hazırlanır ve en hızlı şekilde
+              adresinize teslim edilir.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-user-star-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Uzman Kadro</h3>
+            <p class="text-gray-600">
+              Optik uzmanlarımız size en uygun lensi seçmenizde yardımcı olur ve
+              tüm sorularınızı yanıtlar.
+            </p>
+          </div>
+          <!-- Feature 4 -->
+          <div
+            class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-customer-service-line ri-xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">7/24 Destek</h3>
+            <p class="text-gray-600">
+              Müşteri hizmetlerimiz her zaman yanınızda. İhtiyaç duyduğunuzda
+              bize ulaşabilirsiniz.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Müşterilerimiz Ne Diyor?
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Binlerce memnun müşterimizden bazılarının yorumları. Kalitemizi ve
+            hizmetimizi onların gözünden görün.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Uzun zamandır lens kullanıyorum ve Cihan Kaya'nın lenslerini
+              denedikten sonra başka bir marka kullanmayı düşünemiyorum.
+              Gözlerimde hiç rahatsızlık hissetmiyorum ve renkleri çok doğal
+              duruyor."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="ri-user-line ri-lg text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Ayşe Yılmaz</h4>
+                <p class="text-gray-500 text-sm">İstanbul</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Siparişim çok hızlı geldi ve ürün kalitesi beklentilerimin
+              üzerindeydi. Müşteri hizmetleri de çok ilgili ve yardımcı.
+              Kesinlikle tavsiye ediyorum!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="ri-user-line ri-lg text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Mehmet Demir</h4>
+                <p class="text-gray-500 text-sm">Ankara</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 flex">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-half-fill"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "İlk kez lens kullanacaktım ve çok tedirgin olmuştum. Cihan Bey
+              bana telefonda nasıl takıp çıkaracağımı anlattı ve en uygun lensi
+              önerdi. Şimdi çok rahat kullanıyorum, teşekkürler!"
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4"
+              >
+                <i class="ri-user-line ri-lg text-gray-500"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Zeynep Kaya</h4>
+                <p class="text-gray-500 text-sm">İzmir</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+              Bizimle İletişime Geçin
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Sorularınız mı var? Bize ulaşın, en kısa sürede size yardımcı
+              olalım. Lens seçimi konusunda danışmanlık hizmetimizden de
+              faydalanabilirsiniz.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Adres</h4>
+                  <p class="text-gray-600">
+                    Bağdat Caddesi No:123, Kadıköy, İstanbul
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Telefon</h4>
+                  <p class="text-gray-600">+90 (212) 456 78 90</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">E-posta</h4>
+                  <p class="text-gray-600">info@cihankaya.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4"
+                >
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1">Çalışma Saatleri</h4>
+                  <p class="text-gray-600">
+                    Pazartesi - Cumartesi: 09:00 - 18:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-6">Bize Mesaj Gönderin</h3>
+            <form>
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2"
+                  >Adınız Soyadınız</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  placeholder="Adınız Soyadınız"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2"
+                  >E-posta Adresiniz</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  placeholder="E-posta Adresiniz"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="subject" class="block text-gray-700 mb-2"
+                  >Konu</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  placeholder="Mesajınızın Konusu"
+                />
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block text-gray-700 mb-2"
+                  >Mesajınız</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                  placeholder="Mesajınızı buraya yazın..."
+                ></textarea>
+              </div>
+              <label class="custom-checkbox mb-6 block">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                <span class="text-gray-600 text-sm"
+                  >Kişisel verilerimin işlenmesine izin veriyorum ve
+                  <a href="#" class="text-primary">Gizlilik Politikası</a>'nı
+                  okudum, kabul ediyorum.</span
+                >
+              </label>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap"
+              >
+                Mesaj Gönder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            Kampanyalardan Haberdar Olun
+          </h2>
+          <p class="text-white/80 mb-8">
+            Özel indirimler, yeni ürünler ve lens bakımı hakkında ipuçları için
+            bültenimize abone olun.
+          </p>
+          <form class="flex flex-col md:flex-row gap-4">
+            <input
+              type="email"
+              placeholder="E-posta adresiniz"
+              class="flex-1 px-4 py-3 rounded border-none focus:ring-2 focus:ring-white/20 transition-colors"
+            />
+            <button
+              type="submit"
+              class="bg-white text-primary px-8 py-3 font-medium !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+            >
+              Abone Ol
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 block"
+              >logo</a
+            >
+            <p class="text-gray-400 mb-6">
+              Cihan Kaya olarak 15 yılı aşkın süredir en kaliteli lens
+              ürünlerini müşterilerimizle buluşturuyoruz.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors"
+              >
+                <i class="ri-youtube-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Hızlı Bağlantılar</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Ana Sayfa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Ürünler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Hakkımızda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >İletişim</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Lens Kategorileri</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Renkli Lensler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Günlük Lensler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Aylık Lensler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Astigmatlı Lensler</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Lens Solüsyonları</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-6">Yardım</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Sipariş Takibi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >İade ve Değişim</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Gizlilik Politikası</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Kullanım Şartları</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Sıkça Sorulan Sorular</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">
+              © 2025 Cihan Kaya. Tüm hakları saklıdır.
+            </p>
+            <div class="flex items-center space-x-4">
+              <span class="text-gray-400">Ödeme Yöntemleri:</span>
+              <div class="flex space-x-2">
+                <i class="ri-visa-fill ri-lg"></i>
+                <i class="ri-mastercard-fill ri-lg"></i>
+                <i class="ri-paypal-fill ri-lg"></i>
+                <i class="ri-bank-card-fill ri-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script id="mobile-menu-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+    <script id="product-slider-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("product-slider");
+        const prevButton = document.getElementById("prev-slide");
+        const nextButton = document.getElementById("next-slide");
+        let position = 0;
+        const slideWidth = 300; // Adjust based on your slide width
+        const slidesToShow = window.innerWidth < 768 ? 1 : 4;
+        const slidesToScroll = 1;
+        const totalSlides = slider.children.length;
+        function updateSliderPosition() {
+          slider.style.transform = `translateX(${position}px)`;
+        }
+        prevButton.addEventListener("click", function () {
+          position = Math.min(position + slideWidth * slidesToScroll, 0);
+          updateSliderPosition();
+        });
+        nextButton.addEventListener("click", function () {
+          const maxPosition = -((totalSlides - slidesToShow) * slideWidth);
+          position = Math.max(position - slideWidth * slidesToScroll, maxPosition);
+          updateSliderPosition();
+        });
+        // Handle window resize
+        window.addEventListener("resize", function () {
+          const newSlidesToShow = window.innerWidth < 768 ? 1 : 4;
+          if (newSlidesToShow !== slidesToShow) {
+            position = 0;
+            updateSliderPosition();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
